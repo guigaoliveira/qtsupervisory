@@ -132,7 +132,9 @@ void MainWindow::tcpDisconnect()
     ui->btnStart->setEnabled(false);
 
     ui->btnStop->setEnabled(false);
-
+    
+    this->stopSending();
+    
     QString msg = "Status: Desconectado do servidor.";
     statusBar()->showMessage(msg);
     qDebug() << msg;
